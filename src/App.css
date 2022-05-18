@@ -1,38 +1,98 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  
+}
+
+h1 {
+  font-size: 6rem;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app::before {
+  content: '';
+  background: url('Assets/sunset.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.Content {
+  height: 100%;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  width: 80%;
+  height: 3.5em;
+  padding: 2em;
+  color: white;
+  font-size: 15px;
+  border-radius: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::placeholder {
+  color: white;  
+}
+
+
+.Top {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Bottom {
+  margin: 1rem auto;
+  padding: 1.5em 3em;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  border: 1px solid white;
+  border-radius: 2em;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.BottomItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.CenterItem {
+  padding: 0em 2em;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.bold {
+  font-weight: 700;
 }
